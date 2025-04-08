@@ -64,9 +64,9 @@ pub async fn spawn(
                             "/" => api_solana::on_request(req, api_solana_state).await,
                             "/ready" => {
                                 if api_solana_state.is_ready() {
-                                    Response::builder().body(BodyFull::from("OK").boxed())
+                                    hyper::Response::builder().body(BodyFull::from("OK").boxed())
                                 } else {
-                                    Response::builder()
+                                    hyper::Response::builder()
                                         .status(StatusCode::INTERNAL_SERVER_ERROR)
                                         .body(BodyEmpty::new().boxed())
                                 }
