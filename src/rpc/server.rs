@@ -68,7 +68,7 @@ pub async fn spawn(
                                 } else {
                                     hyper::Response::builder()
                                         .status(StatusCode::INTERNAL_SERVER_ERROR)
-                                        .body(BodyEmpty::new().boxed())
+                                        .body(BodyFull::from("Invalid request").boxed())
                                 }
                             }
                             _ => Response::builder()

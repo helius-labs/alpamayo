@@ -11,7 +11,6 @@ keywords = ["solana", "rpc"]
 publish = false
 
 [dependencies]
-affinity = "0.1.2"
 anyhow = "1.0.96"
 base64 = "0.22.1"
 bincode = "1.3.3"
@@ -25,7 +24,10 @@ http-body-util = "0.1.3"
 human-size = "0.4.3"
 humantime-serde = "1.1.1"
 hyper = "1.6.0"
-hyper-util = { version = "0.1.10", features = ["server-auto", "server-graceful"] }
+hyper-util = { version = "0.1.10", features = [
+    "server-auto",
+    "server-graceful",
+] }
 json5 = "0.4.1"
 jsonrpc-core = "18.0.0"
 jsonrpsee-types = "0.24.8"
@@ -38,7 +40,12 @@ prost = "0.11.9"
 reqwest = "0.12.14"
 richat-client = "2.2.0"
 richat-proto = "2.1.0"
-richat-shared = { version = "2.5.0", default-features = false, features = ["config", "metrics", "shutdown", "version"] }
+richat-shared = { version = "2.5.0", default-features = false, features = [
+    "config",
+    "metrics",
+    "shutdown",
+    "version",
+] }
 rocksdb = "0.23.0"
 serde = { version = "1.0.218", features = ["derive"] }
 serde_json = "1.0.139"
@@ -57,7 +64,11 @@ tokio = "1.43.0"
 tokio-uring = "0.5.0"
 tonic = "0.12.3"
 tracing = "0.1.41"
-tracing-subscriber = { version = "0.3.19", features = ["ansi", "env-filter", "json"] }
+tracing-subscriber = { version = "0.3.19", features = [
+    "ansi",
+    "env-filter",
+    "json",
+] }
 
 [build-dependencies]
 anyhow = "1.0.96"
